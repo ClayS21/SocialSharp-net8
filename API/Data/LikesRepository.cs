@@ -39,7 +39,7 @@ namespace API.Data
 
             switch (predicate)
             {
-                case "likes":
+                case "liked":
                     return await likes
                         .Where(x => x.SourceUserId == userId)
                         .Select(x => x.TargetUser)
