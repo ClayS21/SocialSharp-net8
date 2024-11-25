@@ -19,5 +19,9 @@
 }
 
 .text-muted span {
-    margin-left: 5px;
+    margin-right: 7px;
+}
+
+.text-muted span::before {
+    margin-right: 7px;
 }
