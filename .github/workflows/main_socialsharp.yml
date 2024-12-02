@@ -27,7 +27,7 @@ jobs:
       - name: Install deps and build angular app
         run: |
           cd client
-          npm install
+          npm install --legacy-peer-deps
           ng build
 
       - name: Set up .NET Core
