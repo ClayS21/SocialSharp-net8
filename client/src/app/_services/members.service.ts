@@ -55,36 +55,14 @@ export class MembersService {
     }
 
     updateMember(member: Member) {
-        return this.http.put(this.baseUrl + 'users', member).pipe(
-            // tap(() => {
-            //     this.members.update(members => members.map(m => m.username === member.username ? member : m))
-            // })
-        )
+        return this.http.put(this.baseUrl + 'users', member);
     }
 
     setMainPhoto(photo: Photo) {
-        return this.http.put(this.baseUrl + 'users/set-main-photo/' + photo.id, {}).pipe(
-            // tap(() => {
-            //     this.members.update(members => members.map(m => {
-            //         if(m.photos.includes(photo)) {
-            //             m.photoUrl = photo.url
-            //         }
-            //         return m;
-            //     }))
-            // })
-        )
+        return this.http.put(this.baseUrl + 'users/set-main-photo/' + photo.id, {});
     }
 
     deletePhoto(photo: Photo) {
-        return this.http.delete(this.baseUrl + 'users/delete-photo/' + photo.id).pipe(
-            // tap(() => {
-            //     this.members.update(members => members.map(m => {
-            //         if(m.photos.includes(photo)) {
-            //             m.photos = m.photos.filter(x => x.id !== photo.id)
-            //         }
-            //         return m;
-            //     }))
-            // })
-        )
+        return this.http.delete(this.baseUrl + 'users/delete-photo/' + photo.id);
     }
 }
